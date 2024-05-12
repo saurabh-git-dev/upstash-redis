@@ -44,7 +44,7 @@
 **Description**: Whether to use TLS  
 **Default**: true
 
-## Action Outputs
+## Action Outputs ["create"]
 
 #### `database_id`
 
