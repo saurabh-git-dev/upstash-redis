@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  create_database:
+  delete_database:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
