@@ -19,7 +19,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Create Upstash Redis Database
-        uses: ./
+        uses: saurabh-git-dev/upstash-redis@v1.0.0
         id: create-upstash-redis
         with:
           action: "create"
@@ -61,7 +61,7 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Delete Upstash Redis Database
-        uses: ./
+        uses: saurabh-git-dev/upstash-redis@v1.0.0
         id: delete-upstash-redis
         with:
           action: "delete"
