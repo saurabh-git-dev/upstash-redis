@@ -1,0 +1,19 @@
+name: Delete Upstash Redis Database
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create_database:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      - name: Delete Upstash Redis Database
+        uses: ./
+        id: delete-upstash-redis
+        with:
+          action: "delete"
+          database_name: "test2"
+          email: ${{ secrets.UPSTASH_EMAIL }}
+          api_key: ${{ secrets.UPSTASH_API_KEY }}

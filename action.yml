@@ -1,0 +1,67 @@
+name: 'Create/Delete Upstash Redis Action'
+author: 'saurabh-git-dev'
+description: 'Creates or deletes an Upstash Redis instance'
+branding:
+  icon: 'box'
+  color: 'blue'
+
+inputs:
+  action:
+    required: true
+    description: 'Action to perform (create/delete)'
+  database_name:
+    required: false
+    description: 'The database name'
+  region:
+    required: false
+    description: 'The region'
+  primary_region:
+    required: false
+    description: 'The primary region'
+  read_replica_regions:
+    required: false
+    description: 'The read replica regions separated by comma'
+  email:
+    description: 'The Upstash account email'
+    required: true
+  api_key:
+    description: 'The Upstash API key'
+    required: true
+  tls:
+    description: 'Whether to use TLS'
+    required: false
+    default: true
+
+outputs:
+  database_id:
+    description: 'The database id'
+  database_name:
+    description: 'The database name'
+  database_type:
+    description: 'The database type'
+  region:
+    description: 'The region'
+  port:
+    description: 'The port'
+  creation_time:
+    description: 'The creation time'
+  state:
+    description: 'The state'
+  password:
+    description: 'The password'
+  user_email:
+    description: 'The user email'
+  endpoint:
+    description: 'The endpoint'
+  tls:
+    description: 'Whether to use TLS'
+  rest_token:
+    description: 'The rest token'
+  read_only_rest_token:
+    description: 'The read only rest token'
+  redis_endpoint:
+    description: 'The direct redis endpoint for tcp connection'
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
