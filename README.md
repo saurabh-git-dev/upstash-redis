@@ -149,6 +149,8 @@ jobs:
 
 ```
 
+NOTE: If the database name already exist. It returns the existing database information.
+
 ### Delete Redis DB
 
 ```yml
@@ -172,7 +174,9 @@ jobs:
           email: ${{ secrets.UPSTASH_EMAIL }}
           api_key: ${{ secrets.UPSTASH_API_KEY }}
 ```
+NOTE: Does not throw error if database does not exist. So that next steps can be executed without any issue.
 
+---
 In this example, the action is used to create a new Upstash Redis instance named 'test-db' in the global with read replicas and TLS enabled. Make sure to replace `secrets.UPSTASH_EMAIL` and `secrets.UPSTASH_API_KEY` with your actual secrets in your repository settings.
 
 ## More Info
