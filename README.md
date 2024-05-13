@@ -1,7 +1,7 @@
 
 # Create and Delete Upstash Redis
 
-## Actions Inputs
+## Actions Inputs ["create", "delete"]
 
 ### `action`
 
@@ -11,7 +11,7 @@
 #### `database_name`
 
 **Required**: false  
-**Description**: The database name
+**Description**: The database name, It's is required to delete the database by name.
 
 #### `region`
 
