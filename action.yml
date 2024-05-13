@@ -11,7 +11,7 @@ inputs:
     description: 'Action to perform (create/delete)'
   database_name:
     required: false
-    description: 'The database name'
+    description: 'The database name. It's is required to delete the database by name.'
   region:
     required: false
     description: 'The region'
